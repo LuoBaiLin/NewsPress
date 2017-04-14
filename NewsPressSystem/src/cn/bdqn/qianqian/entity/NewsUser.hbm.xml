@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.bdqn.qianqian.entity.NewsUser" table="NEWS_USER" schema="A_OE">
+         <id name="userId" type="java.lang.Integer" column="USER_ID">
+             <generator class="sequence">
+				<param name="sequence">news2</param>
+			</generator>
+        </id>
+        <property name="userName" type="java.lang.String">
+            <column name="USER_NAME" length="20" not-null="true">
+                <comment>用户昵称</comment>
+            </column>
+        </property>
+        <property name="userPassword" type="java.lang.String">
+            <column name="USER_PASSWORD" length="20" not-null="true">
+                <comment>用户密码</comment>
+            </column>
+        </property>
+        <property name="userEmail" type="java.lang.String">
+            <column name="USER_EMAIL" length="30" not-null="true">
+                <comment>用户邮箱</comment>
+            </column>
+        </property>
+        <property name="userIdnumber" type="java.lang.String">
+            <column name="USER_IDNUMBER" length="24" not-null="true">
+                <comment>身份证号</comment>
+            </column>
+        </property>
+        <property name="userPhone" type="java.lang.Long">
+            <column name="USER_PHONE" precision="11" scale="0" not-null="true">
+                <comment>手机号码</comment>
+            </column>
+        </property>
+        <property name="userAddress" type="java.lang.String">
+            <column name="USER_ADDRESS" length="50" not-null="true">
+                <comment>用户住址</comment>
+            </column>
+        </property>
+        <property name="userImage" type="java.sql.Blob">
+            <column name="USER_IMAGE">
+                <comment>用户头像</comment>
+            </column>
+        </property>
+        <property name="isadmin" type="java.lang.Integer">
+            <column name="ISADMIN" precision="22" scale="0">
+                <comment>是否为管理员</comment>
+            </column>
+        </property>
+        <set name="newsComments" inverse="true">
+            <key>
+                <column name="COMMENT_USER_ID" precision="22" scale="0" not-null="true">
+                    <comment>评论用户编号</comment>
+                </column>
+            </key>
+            <one-to-many class="cn.bdqn.qianqian.entity.NewsComment" />
+        </set>
+    </class>
+</hibernate-mapping>

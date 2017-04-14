@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<package name="default" extends="struts-default" namespace="/">
+		<action name="Login" class="newsUserAction">
+			<result name="success" type="redirectAction">allImageNews</result>
+			<result name="input">login.jsp</result>
+		</action>
+		<action name="register" class="registerAction">
+			<result name="success">login.jsp</result>
+			<result name="input">register.jsp</result>
+		</action>
+		<action name="allImageNews" class="allNewsAction">
+			<result name="success">index.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="newsInfo" class="newsInfoAction">
+			<result name="success">Newsblog.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+		<action name="findNews" class="findNewsAction">
+			<result name="success">Newsblog.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+		<action name="allType" class="allTypeAction">
+			<result name="success">head.jsp</result>
+			<result name="input">head.jsp</result>
+		</action>
+		<action name="findType" class="findTypeAction">
+			<result name="success">TypeNews.jsp</result>
+			<result name="input">findType.jsp</result>
+		</action>
+		<action name="findKeyword" class="findKeywordAction" method="find">
+			<result name="success">keyWordNews.jsp</result>
+			<result name="input">findType.jsp</result>
+		</action>
+		<action name="findKeywords" class="findKeywordAction" method="finds">
+			<result name="success">keyWordNews.jsp</result>
+			<result name="input">findType.jsp</result>
+		</action>
+		<action name="findAuther" class="findAutherAction">
+			<result name="success">findAuther.jsp</result>
+			<result name="input">findType.jsp</result>
+		</action>
+		<action name="addComment" class="addCommentAction">
+			<result name="success">keyWordNews.jsp</result>
+			<result name="success2">Newsblog.jsp</result>
+			<result name="input">findType.jsp</result>
+		</action>
+		<action name="infoLogin" class="infoLoginAction" method="login">
+			<result name="success">Newsblog.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="infoLogins" class="infoLoginAction" method="login1">
+			<result name="success">keyWordNews.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+			<action name="delUser" class="delUserAction">
+			<result name="success">guanli.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+		<action name="delType" class="delTypeAction">
+			<result name="success">guanli.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="delNews" class="delNewsAction">
+			<result name="success">guanli.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="updateUser" class="updateUserAction" method="update">
+			<result name="success">guanli.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="findUser" class="updateUserAction" method="find">
+			<result name="success">updateUser.jsp</result>
+			<result name="input">guanli.jsp</result>
+		</action>
+		
+		<action name="findnewsByAuther" class="guanLiNewsAction" method="findNewsByAuther">
+			<result name="success">newsGuanli.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+		<action name="addNews" class="guanLiNewsAction" method="addNews">
+			<result name="success">index.jsp</result>
+			<result name="input">newsGuanli.jsp</result>
+		</action>
+		<action name="findNewsById" class="guanLiNewsAction" method="findNewsById">
+			<result name="success">updateNews.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+		<action name="updateNewsById" class="guanLiNewsAction" method="updateNewsById">
+			<result name="success">newsGuanli.jsp</result>
+			<result name="input">updateNews.jsp</result>
+		</action>
+		<action name="updateMyInfo" class="myInfoAction" method="update">
+			<result name="success">myInfo.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="delMyInfo" class="myInfoAction" method="delUser">
+			<result name="success">login.jsp</result>
+			<result name="input">myInfo.jsp</result>
+		</action>
+		<action name="getNewsByUserId" class="myInfoAction" method="findNewsByUserId">
+			<result name="success">myInfo.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+	</package>
+</struts>    

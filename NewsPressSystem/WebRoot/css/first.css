@@ -1,0 +1,47 @@
+
+.center{
+	width:58%;
+	height:97%;
+	position:absolute;
+	left:290px;
+	top:10px;
+	overflow: hidden;
+}
+.right{
+	height:800px;
+	width:19%;
+	float: right;
+	position:absolute;
+	right:0px;
+	top:10px;
+}
+@charset "utf-8";
+#left{
+	position:relative;
+	top: 10px;
+	left: 0px;
+	width: 20.8%;
+	height: 700px;
+	background: #4d70c1;
+	}
+.li01{
+	height:40px;
+	padding-top: 15px;
+	padding-left: 35px;
+}
+.li01:HOVER{
+	background-color: #CCC;
+}
+.li01 a span{
+	float: right;
+	margin-right:100px;
+}	
+	
+	
+a{
+	text-decoration: none;
+	color:#000;
+	}
+a:HOVER {
+	color:#9cdbe2;
+}

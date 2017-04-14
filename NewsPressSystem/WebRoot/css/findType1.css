@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+.warrp{
+	width: 100%;
+position:relative;
+left:500px;
+}
+/* 要注意表单元素并不继承父级 font 的问题 */
+
+body, button, input, select, textarea {
+	font-family: "微软雅黑","Microsoft YaHei";
+	font-size:14px;
+	line-height:24px;
+	color: #7b7b7c;
+	outline: none;
+}
+input, select, textarea {
+	font-size: 100%;
+	padding-left:10px;
+
+}
+/* 去掉各Table cell 的边距并让其边重合 */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* 去除默认边框 */
+fieldset, img {
+	border: none;
+	outline: none;
+	-moz-outline:none;
+}
+
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {
+	display: block;
+}
+/* 去掉列表前的标识, li 会继承 */
+ol, ul, li {
+	list-style: none;
+}
+/* 一致的 del 样式 */
+del {
+	text-decoration: line-through;
+}
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: 500;
+}
+/* 统一上标和下标 */
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+/* 默认不显示下划线，保持页面简洁 */
+
+ins, a {
+	text-decoration: none;
+}
+/* 让链接在 hover 状态下显示下划线 */
+a {
+	color: #7b7b7c;
+	cursor: pointer;
+	outline: none;
+	outline: none;
+	blr:expression(this.onFocus=this.blur());
+}
+a:hover {
+	text-decoration: none;
+	color: #787878;
+}
+ul li a{
+	color: #787878;
+}
+/* 清理浮动 */
+.clearFloat:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearFloat {
+	zoom: 1; /* for IE6 IE7 */
+}
+.overflow{
+	overflow: hidden;
+}
+/*display*/
+.display{
+	display: block;
+}
+/* 设置内联, 减少浮动带来的bug */
+.floatLeft {
+	float: left;
+}
+.floatRight {
+	float: right;
+}
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+/* HTML5 媒体文件跟 img 保持一致 */
+audio, canvas, video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+/* 去掉 firefox 下此元素的边框 */
+abbr, acronym {
+	border: 0;
+	font-variant: normal;
+}
+address, caption, cite, code, dfn, em, th, var {
+	font-style: normal;
+	font-weight: 500;
+}
+.none {
+    display: none;
+}
+/*框架css自带样式的重置*/
+.ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {
+    color: #ccc;
+    font-weight:400;
+	text-shadow:none;
+}
+/*重置所有的问题阴影属性*/
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+    text-shadow:none;
+}
+/*设置ul的margin为0*/
+.ui-content .ui-listview-inset, .ui-panel-inner > .ui-listview-inset {
+    margin: 0;
+}
+.ui-shadow {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+/*解决盒模型问题css3属性也可用来统一FORM元素风格*/
+.box-sizing {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+/*topline*/
+.topline{
+	border-top: 4px solid #ff8f00;
+}
+/*topline end*/
+.row{
+   margin-left: -15px;
+   margin-right: -15px;
+}
+.row2{
+	margin-left: -20px;
+	margin-right: -20px;
+}
+.row3{
+	margin-left: -15px;
+	margin-right: -55px;
+}
+/*border*/
+.border-d6{
+	border: 1px solid #d6d6d6;
+}
+.border-be{
+	border: 1px solid #bebebe;
+}
+.border-d2{
+	border: 1px solid #d2d2d2;
+}
+.border-dcdcdc{
+	border: 1px solid #dcdcdc;
+}
+.border-e5{
+	border: 1px solid #e5e5e5;
+}
+.border-d7d7d7{
+	border: 1px solid #d7d7d7;
+}
+.border-c9c9c9{
+	border: 1px solid #c9c9c9;
+}
+.border-t-t-cb{
+	border-top: 2px solid #cbc7c2;
+}
+.border-t-t-cb{
+	border-top: 2px solid #cbc7c2;
+}
+
+.border-t-d7{
+	border-top: 1px solid #d7d7d7;
+}
+.border-t-dc{
+	border-top: 1px solid #dcdcdc;
+}
+.border-t-db{
+	border-top: 1px solid #dbdbdb;
+}
+.border-t-ddd{
+	border-top: 1px solid #dddddd;
+}
+.border-b-ee{
+	border-bottom: 1px solid #eee;
+}
+.border-b-dc{
+	border-bottom: 1px solid #dcdcdc;
+}
+.border-b-fd{
+	border-bottom: 1px solid #fdfdfd;
+}
+.border-b-be{
+	border-bottom: 1px solid #bebebe;
+}
+.border-b-dd{
+	border-bottom: 1px solid #dddddd;
+}
+.border-b-ec{
+	border-bottom: 1px solid #ececec;
+}
+.border-b-ff{
+	border-bottom: 1px solid #fff;
+}
+.border-b-c8{
+	border-bottom: 1px solid #c8c8c8;
+}
+.border-b-e5{
+	border-bottom: 1px solid #e5e5e5;
+}
+.border-d-b-b4{
+	border-bottom: 2px solid #b4b4b4;
+}
+.border-d-b-00{
+	border-bottom: 2px solid #000;
+}
+.border-d-b-c8{
+	border-bottom: 2px solid #c8c8c8;
+}
+.border-d-b-c6{
+	border-bottom: 1px dashed #c6c6c6;
+}
+.border-d-b-ec{
+	border-bottom: 1px dashed #ececec;
+}
+.border-d-b-ee{
+	border-bottom: 1px dashed #eee;
+}
+.border-d-b-d2d2d2{
+	border-bottom: 1px dashed #d2d2d2;
+}
+.border-d-b-cb{
+	border-bottom: 1px solid #cbc7c2;
+}
+.border-d-b-328fba{
+	border-bottom: 1px solid #328fba;
+}
+.border-d-b-c9c9c9{
+	border-bottom: 1px solid #c9c9c9;
+}
+.border-d-b3-328fba{
+	border-bottom: 3px solid #328fba;
+}
+
+.border-l-r-c8{
+	border-right: 1px solid #c8c8c8;
+}
+
+.border-d-l-c9c9c9{
+	border-left: 1px dashed #c9c9c9;
+}
+.border-d-r-c9c9c9{
+	border-right: 1px dashed #c9c9c9;
+}
+a:HOVER{
+	color:red;
+}
+
+/*定位*/
+.relative{
+	position: relative;
+}
+.absolute{
+	position: absolute;
+}

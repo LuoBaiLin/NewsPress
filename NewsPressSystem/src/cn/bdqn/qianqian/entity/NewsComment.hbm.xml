@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.bdqn.qianqian.entity.NewsComment" table="NEWS_COMMENT" schema="A_OE">
+         <id name="commentId" type="java.lang.Integer" column="COMMENT_ID">
+             <generator class="sequence">
+				<param name="sequence">news5</param>
+			</generator>
+        </id>
+        <many-to-one name="newsInfo" class="cn.bdqn.qianqian.entity.NewsInfo" lazy="false" fetch="join">
+            <column name="COMMENT_NEWS_ID" precision="22" scale="0" not-null="true">
+                <comment>评论新闻编号</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="newsUser" class="cn.bdqn.qianqian.entity.NewsUser" lazy="false"  fetch="join">
+            <column name="COMMENT_USER_ID" precision="22" scale="0" not-null="true">
+                <comment>评论用户编号</comment>
+            </column>
+        </many-to-one>
+        <property name="commentInfo" type="java.lang.String">
+            <column name="COMMENT_INFO" length="1000" not-null="true">
+                <comment>评论内容</comment>
+            </column>
+        </property>
+        <property name="commentTime" type="java.util.Date">
+            <column name="COMMENT_TIME" length="7" not-null="true">
+                <comment>评论时间</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

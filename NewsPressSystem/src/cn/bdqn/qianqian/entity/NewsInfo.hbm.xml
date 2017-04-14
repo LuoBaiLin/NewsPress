@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.bdqn.qianqian.entity.NewsInfo" table="NEWS_INFO" schema="A_OE">
+         <id name="newsId" type="java.lang.Integer" column="NEWS_ID">
+             <generator class="sequence">
+				<param name="sequence">news4</param>
+			</generator>
+        </id>
+        <many-to-one name="newsType" class="cn.bdqn.qianqian.entity.NewsType" lazy="false"  fetch="join">
+            <column name="NEWS_TYPE_ID" precision="22" scale="0" not-null="true">
+                <comment>新闻类型编号</comment>
+            </column>
+        </many-to-one>
+        <property name="newsTitle" type="java.lang.String">
+            <column name="NEWS_TITLE" length="500" not-null="true">
+                <comment>新闻标题</comment>
+            </column>
+        </property>
+        <property name="newsContent" type="java.lang.String">
+            <column name="NEWS_CONTENT" length="4000" not-null="true">
+                <comment>新闻内容</comment>
+            </column>
+        </property>
+        <property name="newsSmalltitle" type="java.lang.String">
+            <column name="NEWS_SMALLTITLE" length="200">
+                <comment>新闻内容中的小标题</comment>
+            </column>
+        </property>
+        <property name="newsStarttime" type="java.util.Date">
+            <column name="NEWS_STARTTIME" length="7" not-null="true">
+                <comment>新闻发布时间</comment>
+            </column>
+        </property>
+        <property name="newsAuther" type="java.lang.String">
+            <column name="NEWS_AUTHER" length="50" not-null="true">
+                <comment>新闻发布作者</comment>
+            </column>
+        </property>
+        <property name="newsKeyword" type="java.lang.String">
+            <column name="NEWS_KEYWORD" length="50" not-null="true">
+                <comment>新闻关键字</comment>
+            </column>
+        </property>
+        <property name="newsBorwse" type="java.lang.Integer">
+            <column name="NEWS_BORWSE" precision="22" scale="0">
+                <comment>新闻浏览量</comment>
+            </column>
+        </property>
+        <property name="newsSmallcontent" type="java.lang.String">
+            <column name="NEWS_SMALLCONTENT" length="4000">
+                <comment>新闻详细内容</comment>
+            </column>
+        </property>
+        <set name="newsImages" inverse="true">
+            <key>
+                <column name="NEWS_ID" precision="22" scale="0" not-null="true">
+                    <comment>新闻编号</comment>
+                </column>
+            </key>
+            <one-to-many class="cn.bdqn.qianqian.entity.NewsImage" />
+        </set>
+        <set name="newsComments" inverse="true">
+            <key>
+                <column name="COMMENT_NEWS_ID" precision="22" scale="0" not-null="true">
+                    <comment>评论新闻编号</comment>
+                </column>
+            </key>
+            <one-to-many class="cn.bdqn.qianqian.entity.NewsComment" />
+        </set>
+    </class>
+</hibernate-mapping>

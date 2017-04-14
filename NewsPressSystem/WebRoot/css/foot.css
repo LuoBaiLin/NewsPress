@@ -1,0 +1,7 @@
+
+	#foot{text-align: center;width: 100%;height:100px;}
+	#foot a{text-decoration: none;color: #808080;font-size:12px;}
+	#foot a:hover{text-decoration: underline;}
+	#foot p{font-size:12px;}
+	#foot dl dd span a{font-size:12px;}
+	

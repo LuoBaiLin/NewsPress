@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.bdqn.qianqian.entity.NewsType" table="NEWS_TYPE" schema="A_OE">
+         <id name="typeId" type="java.lang.Integer" column="TYPE_ID">
+             <generator class="sequence">
+				<param name="sequence">news3</param>
+			</generator>
+        </id>
+        <property name="typeTitle" type="java.lang.String">
+            <column name="TYPE_TITLE" length="20" not-null="true">
+                <comment>类型名称</comment>
+            </column>
+        </property>
+        <set name="newsInfos" inverse="true">
+            <key>
+                <column name="NEWS_TYPE_ID" precision="22" scale="0" not-null="true">
+                    <comment>新闻类型编号</comment>
+                </column>
+            </key>
+            <one-to-many class="cn.bdqn.qianqian.entity.NewsInfo" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,43 @@
+*{ font-family:"微软雅黑"}
+body{ background-color:#fff; width:100%;}
+body, input, button, select, textarea { font-size:12px; color:#333;}
+textarea { resize: none; }
+body, ul, ol, li, dl, dd, p, h1, h2, h3, h4, h5, h6, form,img, fieldset, .pr, .pc { margin:0; padding:0;}
+table { empty-cells: show; border-collapse: collapse;
+}
+caption, th { text-align: left; font-weight: 400; }
+ul li, .xl li { list-style: none; }
+h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight:normal;}
+em, cite, i { font-style: normal; display: block;}
+a { color:#666; text-decoration: none; transition: 0.5s all; -webkit-transition: 0.5s all; -moz-transition: 0.5s all; -o-transition: 0.5s all;}
+a:hover{ color:#cda484}
+
+img{ border:0;}
+label { cursor: pointer; }
+input:disabled{background-color:#fff;color:#666;}
+textarea:disabled{background-color:#fff;color:#666;}
+.cl:after { content: "."; display: block; height: 0; clear: both; visibility: hidden ; ! } 
+.cl { zoom: 1; }
+
+.wrap{ width:1120px; margin:0 auto;}
+
+
+
+
+.scrollbox{width:1120px; position: relative;}
+#scrollDiv{width:1120px;height:110px; overflow:hidden; display: block;}
+#scrollDiv ul{ width: 1131px;}
+#scrollDiv li{width:344px;height:88px;padding:10px;margin-right:11px; float:left;background: #fff;transition: 0.5s all; -webkit-transition: 0.5s all; -moz-transition: 0.5s all; -o-transition: 0.5s all;border:1px solid #dedede;}
+#scrollDiv li img{width:148px;height:88px;margin-right:10px;float:left;}
+#scrollDiv li span{ float: right;width:186px;height:88px; overflow: hidden; display: block;}
+#scrollDiv li span h4{font-size: 14px;font-weight: bold;line-height: 14px;margin-bottom:5px;color: #a57132;}
+#scrollDiv li span p{line-height: 20px;height:40px;font-size: 12px;color: #666666;display: block;overflow: hidden;}
+#scrollDiv li span em{ height: 18px;line-height: 18px;text-align:center;font-size: 14px;width:30px;border:1px solid #72ae2d; display: block;color: #72ae2d;margin-top: 8px;}
+#scrollDiv li:hover{ background: #7cba27;border:1px solid #72ae2d;}
+#scrollDiv li:hover span h4{ color: #fff;}
+#scrollDiv li:hover span p{ color: #fff;}
+#scrollDiv li:hover span em{ color: #fff;border:1px solid #fff; }
+.scroltit{ position: absolute; right:-30px; top:30px;width:18px;}
+.scroltit small{float:right; font-size:12px;width:18px;height:18px; line-height:18px; text-align: center;background:#bbbbbb;color: #fff;font-family: "����"; margin:2px 0; transition: 0.5s all; -webkit-transition: 0.5s all; -moz-transition: 0.5s all; -o-transition: 0.5s all;}
+.scroltit small img{margin-top:6px;}
+.scroltit small:hover{ background: #ff9a22;}
